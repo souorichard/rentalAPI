@@ -1,6 +1,5 @@
 package br.com.etec.richard.rentalAPI.model;
 
-import com.fasterxml.jackson.annotation.JsonFilter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
@@ -10,18 +9,18 @@ import java.util.List;
 
 @Data
 @Entity
-@Table(name = "gender")
-public class Gender {
+@Table(name = "actor")
+public class Actor {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
     @Column(length = 200)
-    private String description;
+    private String nameactor;
 
     @JsonIgnore
-    @OneToMany(mappedBy = "gender")
+    @OneToMany(mappedBy = "author")
     private List<Movie> movies = new ArrayList<>();
 
 }
