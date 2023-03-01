@@ -11,18 +11,18 @@ import java.math.BigInteger;
 public class Movie {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private BigInteger id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @Column(length = 200)
     private String moviename;
 
     @ManyToOne
     @JoinColumn(name = "idgender")
-    private Integer idgender;
+    private Gender idgender;
 
     @ManyToOne
-    @JoinColumn(name = "idauthor")
-    private Integer idactor;
+    @JoinColumn(name = "idactor")
+    private Actor idactor;
 
 }

@@ -13,14 +13,14 @@ import java.util.List;
 public class Actor {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @Column(length = 200)
     private String nameactor;
 
     @JsonIgnore
-    @OneToMany(mappedBy = "author")
+    @OneToMany(mappedBy = "actor")
     private List<Movie> movies = new ArrayList<>();
 
 }
