@@ -21,6 +21,6 @@ public class Gender {
 
     @JsonIgnore
     @OneToMany(mappedBy = "gender")
-    private List<Movie> movies = new ArrayList<>();
+    private List<Movie> moviesgenero = new ArrayList<>();
 
 }

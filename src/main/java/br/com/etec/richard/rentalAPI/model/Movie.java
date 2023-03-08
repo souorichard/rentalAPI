@@ -3,7 +3,6 @@ package br.com.etec.richard.rentalAPI.model;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.math.BigInteger;
 
 @Data
 @Entity

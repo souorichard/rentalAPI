@@ -21,6 +21,6 @@ public class Actor {
 
     @JsonIgnore
     @OneToMany(mappedBy = "actor")
-    private List<Movie> movies = new ArrayList<>();
+    private List<Movie> moviesator = new ArrayList<>();
 
 }
